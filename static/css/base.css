@@ -5,9 +5,13 @@ html {
 body {
     background: url("/media/home.jpeg") no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 204px);
-    color: darkslategray;
+    height: calc(100vh - 164px);
+    color: #fff;
     font-family: 'Lato';
+}
+
+.avatar {
+    background: url("/media/avatart.jpg");
 }
 
 /* from Bulma */
@@ -48,6 +52,6 @@ body {
     }
 
     .header-container {
-        padding-top: 204px;
+        padding-top: 174px;
     }
 }
