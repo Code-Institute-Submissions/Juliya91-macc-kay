@@ -1,4 +1,4 @@
-% load static %}
+{% load static %}
 
 <!--------- Structure taken from walkthrough project Boutique Ado and modified slightly
 (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/218dfd4d7d604474b317ed2cdc19883b/?child=first)  -->
@@ -18,12 +18,17 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/8bb0e6d9ef.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -36,7 +41,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}">
               <h2 class="logo-font text-black my-0"><strong>MACC-Kay</strong></h2>
@@ -79,7 +84,7 @@
                 </div>
               </li>
               <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                       <p class="my-0">
