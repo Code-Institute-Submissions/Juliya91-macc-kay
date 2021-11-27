@@ -89,9 +89,9 @@
                       <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                       <p class="my-0">
                           {% if grand_total %}
-                              ${{ grand_total|floatformat:2 }}
+                              £{{ grand_total|floatformat:2 }}
                           {% else %}
-                              $0.00
+                              £0.00
                           {% endif %}
                       </p>
                   </div>
@@ -100,13 +100,14 @@
             </ul>
           </div>
         </div>
-        <!-- <div class="row bg-dark">
+        <div class="row bg-dark">
           <nav class="navbar navbar-expand-lg navbar-light w-100">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
+              {% include 'includes/main-nav.html' %}
           </nav>
-      </div> -->
+      </div>
     </header>
     
     {% if messages %}
@@ -114,13 +115,7 @@
     {% endif %}
 
     {% block page_header %}
-    <!-- <nav class="navbar container navbar-dark bg-dark text-white pullUp">
-      
-      <a>CAPTURES</a>
-      <a>TOUR</a>
-      <a>PROFILE</a>
-      <a>CART</a>
-    </nav> -->
+    
     {% endblock %}
 
     {% block content %}

@@ -5,13 +5,18 @@ html {
 body {
     background: url("/media/home.jpeg") no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(80vh - 164px);
     color: #fff;
     font-family: 'Lato';
 }
 
 .avatar {
     background: url("/media/avatart.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 400%;
+   
 }
 
 /* from Bulma */
@@ -21,10 +26,12 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: #fff;
 }
 
 .logo-font {
     text-transform: uppercase;
+    text-align: center
 }
 
 .main-logo-link {
