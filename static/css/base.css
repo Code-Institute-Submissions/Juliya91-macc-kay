@@ -6,7 +6,7 @@ section {
     background: url("/media/home.jpeg") no-repeat center center;
     background-size: cover;
     background-position: fixed;
-    height: 100vh;
+    height: max-content;
     color: #fff;
     font-family: 'Lato';
 }
