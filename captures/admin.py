@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Captures, Artist
 
-# Register your models here.
+admin.site.register(Captures)
+admin.site.register(Artist)
