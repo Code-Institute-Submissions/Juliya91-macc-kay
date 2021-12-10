@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {%for capture in captures%}
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <a href="{% url 'capture_detail' capture.id %}">
+                        <p>{{ capture.artist }}</p>
+                        {%if capture.image%}
+                            <img src="{{ capture.image.url }}" style="width: 200px;" height="200px"/>
+                        {%endif%}
+                        <p class="m-0">{{ capture.name }}</p>
+                        <p>£{{ capture.price }}</p>
+                    </a>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr>
+                    </div>
+                {% endif %}                        
+                {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+{% endblock %}

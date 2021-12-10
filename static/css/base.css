@@ -46,7 +46,7 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
-    height: 300%;
+    height: 300px;
     margin-bottom: 2%;
 }
 
@@ -83,6 +83,10 @@ section {
 
 .border-black {
     border: 1px solid white !important;
+}
+
+div.show {
+    background-color: rgb(36, 35, 35);
 }
 
 /* -------------------------------- Media Queries */

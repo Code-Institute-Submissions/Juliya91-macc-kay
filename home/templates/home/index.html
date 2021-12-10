@@ -28,25 +28,23 @@
                         Head <a href="#">here</a> to explore those captures.
                     </p>
                     <p>If you would like to immerse in to the world of Mural art of London, join me on the real life tour 
-                        <a href="" ><i class="fas fa-hand-point-right"></i></a></p>
+                        <a href="" ><i class="fas fa-hand-point-right"></i></a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
+        {% for artist in artists %}
             <div class="col">
-                <h4>Alo Art @alo_art</h4>
-                <p>
-                    ALO (Aristide Loria) is an Italian artist based in London since 2010. 
-                    He began to reproduce his indoor techniques on the outdoor walls mostly in London, 
-                    Paris, New York and Berlin. ALO started his career in London where he began painting 
-                    on the walls and working with art galleries. He had his first major solo show "Hail to the loser" 
-                    at Saatchi Gallery in 2014, with which he started a continuous collaboration. His second solo show 
-                    with the Saatchi Gallery was "Exit from Aden" in 2017. ALO describes his style as "Urban expressionism". 
-                    In 2016 he has been included in the Urban Art auction at Artcurial in Paris.
-                </p>
-                <h4>AntCarver @antcarver</h4>
+                <h4>{{artist.name}}</h4>
+                    <img src="{{ artist.image.url }}" style="width: 200px;" height="200px"/>
+                    <p>
+                        {{artist.artist_statement}}
+                    </p>
+                
+                <!-- <h4>AntCarver @antcarver</h4>
                 <p>
                     Ant Carver (b.1991) graduated from Oxford Brookes with a degree in Fine Art and now works from a studio in 
                     Whitechapel, London. He is a figurative painter who combines traditional oil painting techniques with a 
@@ -88,8 +86,9 @@
                     and prefer to operate anonymously and work with an ever-growing circle of friends called The Postman Collective.
                     Their work is inspired by a passion for photography and iconic imagery.  A love for music and pop culture manifests 
                     itself throughout their artworks. The Postman’s unique style also takes influence from their roots in graffiti culture.
-                </p>
+               </p> -->
             </div>
+        {% endfor %}
         </div>
     </div>
 {% endblock %}

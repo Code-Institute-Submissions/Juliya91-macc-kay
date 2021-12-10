@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>{{ capture.artist }}</p>
+                <p>{{ capture.name }}</p>
+                <p>{{ capture.description }}</p>
+                {%if capture.image%}
+                    <img src="{{ capture.image.url }}" style="width: 200px;" height="200px"/>
+                {%endif%}
+                <p>${{ capture.price }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
