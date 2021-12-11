@@ -8,8 +8,23 @@ def all_captures(request):
     """ A view to show all captures, including sorting and search queries """
     captures = Captures.objects.all()
     query = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                captures = captures.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            captures = captures.order_by(sortkey)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -21,9 +36,12 @@ def all_captures(request):
                 name__icontains=query) | Q(description__icontains=query)
             captures = captures.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'captures': captures,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'captures/captures.html', context)

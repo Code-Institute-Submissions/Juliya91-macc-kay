@@ -10,9 +10,8 @@
                 CAPTURES
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-captures-link">
-                <a href="" class="dropdown-item">BY PRICE</a>
-                <a href="" class="dropdown-item ">BY RATING</a>
-                <a href="" class="dropdown-item ">BY ARTIST</a>
+                <a href="{% url 'captures' %}?sort=price&direction=asc" class="dropdown-item">BY PRICE</a>
+                <a href="{% url 'captures' %}?sort=artist&direction=asc" class="dropdown-item ">BY ARTIST</a>
                 <a href="{% url 'captures' %}" class="dropdown-item">All CAPTURES</a>
             </div>
         </li>
