@@ -89,6 +89,11 @@ div.show {
     background-color: rgb(36, 35, 35);
 }
 
+a.artist-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */

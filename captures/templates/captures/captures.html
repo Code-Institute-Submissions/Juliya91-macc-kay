@@ -10,7 +10,48 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Captures by C-Kay</h2>
+                {% for c in current_artists %}
+                    <a class="artist-badge text-decoration-none" href="{% url 'captures' %}?artist={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="captures-container col-10 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="artist_asc" {% if current_sorting == 'artist_asc' %}selected{% endif %}>Artist (A-Z)</option>
+                                <option value="artist_desc" {% if current_sorting == 'artist_desc' %}selected{% endif %}>Artist (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_artists or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'captures' %}">Captures Home</a> | </span>
+                            {% endif %}
+                            {{ captures|length }} Captures{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                        {% if captures.artist %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-muted" href="{% url 'captures' %}?artist={{ captures.artist.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ captures.artist.friendly_name }}
+                                </a>
+                            </p>
+                        {% endif %}
+                    </div>
+                </div>
         <div class="row">
             {%for capture in captures%}
                 <div class="col-sm-12 col-md-6 col-lg-3">

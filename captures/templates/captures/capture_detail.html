@@ -20,6 +20,13 @@
                     <img src="{{ capture.image.url }}" style="width: 200px;" height="200px"/>
                 {%endif%}
                 <p>${{ capture.price }}</p>
+                {% if captures.artist %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'captures' %}?artist={{ captures.artist.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ captures.artist.friendly_name }}
+                        </a>
+                    </p>
+                {% endif %}
             </div>
         </div>
     </div>

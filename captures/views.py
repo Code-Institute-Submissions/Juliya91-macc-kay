@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Captures
+from .models import Captures, Artist
 
 
 def all_captures(request):
     """ A view to show all captures, including sorting and search queries """
     captures = Captures.objects.all()
     query = None
+    artists = None
     sort = None
     direction = None
 
@@ -18,12 +19,18 @@ def all_captures(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 captures = captures.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'artist':
+                sortkey = 'artist__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             captures = captures.order_by(sortkey)
+
+        if 'artist' in request.GET:
+            artists = request.GET['artist'].split(',')
+            captures = captures.filter(artist__name__in=artists)
+            artists = Artist.objects.filter(name__in=artists)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -41,6 +48,7 @@ def all_captures(request):
     context = {
         'captures': captures,
         'search_term': query,
+        'current_artists': artists,
         'current_sorting': current_sorting,
     }
 
