@@ -14,11 +14,11 @@
         <div class="row">
             <div class="col">
                 <p>{{ capture.artist }}</p>
-                <p>{{ capture.name }}</p>
-                <p>{{ capture.description }}</p>
                 {%if capture.image%}
                     <img src="{{ capture.image.url }}" style="width: 200px;" height="200px"/>
                 {%endif%}
+                <p>{{ capture.name }}</p>
+                <p>{{ capture.description }}</p>
                 <p>${{ capture.price }}</p>
                 {% if captures.artist %}
                     <p class="small mt-1 mb-0">
@@ -27,6 +27,30 @@
                         </a>
                     </p>
                 {% endif %}
+                <form class="form" action="{% url 'add_to_cart' capture.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ capture.id }}" id="id_qty_{{ capture.id }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <a href="{% url 'captures' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
