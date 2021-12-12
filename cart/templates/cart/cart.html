@@ -41,6 +41,7 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.capture.name }}</strong></p>
+                                        <p class="my-0"><strong>Size: </strong>{% if item.capture.has_option %}{{ item.option|upper }}{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.capture.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
