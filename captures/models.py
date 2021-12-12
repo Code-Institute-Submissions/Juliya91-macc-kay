@@ -20,7 +20,10 @@ class Artist(models.Model):
         return self.friendly_name
 
 
-class Captures(models.Model):
+class Capture(models.Model):
+    class Meta:
+        verbose_name_plural = 'Captures'
+
     artist = models.ForeignKey(
         'Artist', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)

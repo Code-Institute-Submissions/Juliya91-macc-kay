@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Captures, Artist
+from .models import Capture, Artist
 
 
 def all_captures(request):
     """ A view to show all captures, including sorting and search queries """
-    captures = Captures.objects.all()
+    captures = Capture.objects.all()
     query = None
     artists = None
     sort = None
@@ -57,7 +57,7 @@ def all_captures(request):
 
 def capture_detail(request, capture_id):
     """ A view to show product details """
-    capture = get_object_or_404(Captures, pk=capture_id)
+    capture = get_object_or_404(Capture, pk=capture_id)
 
     context = {
         'capture': capture,

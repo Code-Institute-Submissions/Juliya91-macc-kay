@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Captures, Artist
+from .models import Capture, Artist
 
 
-class CapturesAdmin(admin.ModelAdmin):
+class CaptureAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -22,5 +22,5 @@ class ArtistAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Captures, CapturesAdmin)
+admin.site.register(Capture, CaptureAdmin)
 admin.site.register(Artist, ArtistAdmin)

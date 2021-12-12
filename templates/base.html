@@ -63,30 +63,30 @@
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-              <li class="list-inline-item dropdown">
+              <li class="list-inline-item text-black dropdown">
                 <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                       <div><i class="fas fa-user fa-lg"></i></div>
                       <p class="my-0">MY PROFILE</p>
                   </div>
                 </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                <div class="dropdown-menu text-black border-0" aria-labelledby="user-options">
                   {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                          <a href="" class="dropdown-item">CONTENT MANAGEMENT</a>
+                          <a href="" class="dropdown-item text-black">CONTENT MANAGEMENT</a>
                       {% endif %}
-                      <a href="" class="dropdown-item">ORDER HISTORY</a>
-                      <a href="{% url 'account_logout' %}" class="dropdown-item">LOGOUT</a>
+                      <a href="" class="dropdown-item text-black">ORDER HISTORY</a>
+                      <a href="{% url 'account_logout' %}" class="dropdown-item text-black">LOGOUT</a>
                   {% else %}
-                      <a href="{% url 'account_signup' %}" class="dropdown-item">REGISTER</a>
-                      <a href="{% url 'account_login' %}" class="dropdown-item">LOGIN</a>
+                      <a href="{% url 'account_signup' %}" class="dropdown-item text-black">REGISTER</a>
+                      <a href="{% url 'account_login' %}" class="dropdown-item text-black">LOGIN</a>
                   {% endif %}
                 </div>
               </li>
               <li class="list-inline-item">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_cart' %}">
                   <div class="text-center">
-                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                      <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                       <p class="my-0">
                           {% if grand_total %}
                               £{{ grand_total|floatformat:2 }}
