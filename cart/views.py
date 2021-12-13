@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def view_cart(request):
@@ -28,3 +28,29 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def adjust_cart(request, item_id):
+    """ Add a quantity of the specified capture to the shopping bag """
+
+    quantity = int(request.POST.get('quantity'))
+    option = None
+    if 'capture_option' in request.POST:
+        option = request.POST['capture_option']
+    cart = request.session.get('cart', {})
+
+    if option:
+        if quantity > 0:
+            cart[item_id]['items_by_option'][option] = quantity
+        else:
+            del cart[item_id]['items_by_option'][option]
+            if not cart[item_id]['items_by_option']:
+                cart.pop(item_id)
+    else:
+        if quantity > 0:
+            cart[item_id] = quantity
+        else:
+            cart.pop(item_id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
