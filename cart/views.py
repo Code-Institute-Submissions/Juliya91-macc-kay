@@ -12,12 +12,19 @@ def add_to_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    option = None
+    if 'capture_option' in request.POST:
+        option = request.POST['capture_option']
     cart = request.session.get('cart', {})
 
-    if item_id in list(cart.keys()):
-        cart[item_id] += quantity
-    else:
-        cart[item_id] = quantity
+    if option:
+        if item_id in list(cart.keys()):
+            if option in cart[item_id]['items_by_option'].keys():
+                cart[item_id]['items_by_option'][option] += quantity
+            else:
+                cart[item_id]['items_by_option'][option] = quantity
+        else:
+            cart[item_id] = {'items_by_option': {option: quantity}}
 
     request.session['cart'] = cart
     return redirect(redirect_url)
