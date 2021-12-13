@@ -18,7 +18,7 @@
                 </h1>
                 <div class="avatar"></div>
                 <div class="quote-box">
-                    <p class="d-sm-none">
+                    <p class="d-sm-none d-md-block">
                         I started to take photos of street art while I was living in Perth and one day, I just quit my job. 
                         Whilst walking around town afterwards, I then looked up and saw a 5-storey street art, and snap, that was the start!
                     </p>
@@ -36,34 +36,40 @@
     </section>
     <div class="container-fluid">
         <div class="row">
-        {% for artist in artists %}
             <div class="col">
-                <h4>{{artist.name}}</h4>
-                    <img src="{{ artist.image.url }}" style="width: 200px;" height="200px"/>
-                    <p>
-                        {{artist.artist_statement}}
-                    </p>
-                
-                <!-- <h4>AntCarver @antcarver</h4>
+                <h4>Alo Art</h4>
+                <p>
+                    ALO (Aristide Loria) is an Italian artist based in London since 2010. He began to reproduce his indoor 
+                    techniques on the outdoor walls mostly in London, Paris, New York and Berlin. ALO started his career 
+                    in London where he began painting on the walls and working with art galleries. He had his first major 
+                    solo show "Hail to the loser" at Saatchi Gallery in 2014, with which he started a continuous collaboration. 
+                    His second solo show with the Saatchi Gallery was "Exit from Aden" in 2017. ALO describes his style as 
+                    "Urban expressionism". In 2016 he has been included in the Urban Art auction at Artcurial in Paris.
+                </p>
+
+                <h4>AntCarver</h4>
                 <p>
                     Ant Carver (b.1991) graduated from Oxford Brookes with a degree in Fine Art and now works from a studio in 
                     Whitechapel, London. He is a figurative painter who combines traditional oil painting techniques with a 
                     contemporary style working on aluminium panel. His paintings combine realistic elements together with looser 
                     more abstract mark making and sketched elements. 
                 </p>
-                <h4>C215 @christianguemy (c215)</h4>
+
+                <h4>C215</h4>
                 <p>
                     C215, is the moniker of Christian Guémy, a French street artist hailing from Paris who has been 
                     described as "France's answer to Banksy".C215 primarily uses stencils to produce his art. 
                     His first stencil work was put up in 2006, but he has been a graffiti artist for (as of 2011) 
                     over 20 years. His work consists mainly of close up portraits of people.  
                 </p>
-                <h4>DS_Art @ds__art</h4>
+
+                <h4>DS_Art</h4>
                 <p>
-                    David Schmidt aka ‘DS’ is a US national, UK-bred urban artist, striving to create visually attractive, 
+                    David Schmidt aka `DS` is a US national, UK-bred urban artist, striving to create visually attractive, 
                     mentally engaging art all wrapped up in rich colour and form.
                 </p>
-                <h4>MrCenz @mrcenzone</h4>
+
+                <h4>MrCenz</h4>
                 <p>
                     Mr Cenz has been scribbling on surfaces since 1988 when he first discovered hip-hop culture 
                     and graffiti art. He soon became obsessed with this new and exciting art form and after a few 
@@ -72,23 +78,24 @@
                     college and University. This has led to a career as a professional graffiti artist with several 
                     solo shows and high profile commissions internationally. 
                 </p>
-                <h4>Paul Don Smith @pauldonsmith</h4>
+
+                <h4>Paul Don Smith</h4>
                 <p>
                     Urban Artist Paul “DON” Smith who has been painting on the streets for 31 years and is still shit. 
-                    You’ve seen his work everywhere in London from Brick Lane to the South Bank skate park down to Richmond. 
+                    You`ve seen his work everywhere in London from Brick Lane to the South Bank skate park down to Richmond. 
                     His first solo show at Graffik Gallery caused a huge amount of interest and the longest queue outside the 
                     gallery in Graffik's history. 
                 </p>
-                <h4>ThePostmanArt @thepostman_art</h4>
+
+                <h4>ThePostmanArt</h4>
                 <p>
                     The Postman was born in Brighton in 2018 when two people met by chance and discovered a shared love for street art. 
                     The pair became best friends and have since set off on many adventures together. They are rather private individuals 
                     and prefer to operate anonymously and work with an ever-growing circle of friends called The Postman Collective.
                     Their work is inspired by a passion for photography and iconic imagery.  A love for music and pop culture manifests 
-                    itself throughout their artworks. The Postman’s unique style also takes influence from their roots in graffiti culture.
-               </p> -->
+                    itself throughout their artworks. The Postman`s unique style also takes influence from their roots in graffiti culture.
+               </p>
             </div>
-        {% endfor %}
         </div>
     </div>
 {% endblock %}

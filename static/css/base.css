@@ -7,33 +7,6 @@ body {
     color: #212529;
 }
 
-ul.pull-up li a {
-    color: #FFF;
-    text-decoration: none;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-
-ul.pull-up li a:begore {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    bottom: 0px;
-    content: '';
-    background: #FFF;
-    opacity: 0.3;
-    transition: all 0.3s;
-}
-
-ul.pullUp li a:hover:before
-{
-height: 100%;
-}
-
 section {
     background: url("/media/home.jpeg") no-repeat center center;
     background-size: cover;
@@ -48,7 +21,7 @@ section {
     background-repeat: no-repeat;
     background-position-x: center;
     height: 300px;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 
 .quote-box {
@@ -162,6 +135,7 @@ a.artist-badge > span.badge:hover {
     .header-container {
         padding-top: 130px;
     }
+
 }
 
 @media (max-width: 991px) {
