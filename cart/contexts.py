@@ -26,7 +26,7 @@ def cart_contents(request):
                 capture_count += quantity
                 cart_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'capture': capture,
                     'option': option,
                 })
