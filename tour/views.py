@@ -1,3 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .forms import TourForm
+
+
+def tour(request):
+
+    tour_form = TourForm()
+    template = 'tour/tour.html'
+    context = {
+        'tour_form': tour_form,
+    }
+
+    return render(request, template, context)

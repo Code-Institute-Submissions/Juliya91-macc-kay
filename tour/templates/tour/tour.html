@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">BOOK A TOUR</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="{% url 'tour' %}" method="POST">
+                <div class="form-group">
+                    <label for="fName">FIRST NAME</label>
+                    <input type="text" class="form-control" id="fName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lName">LAST NAME</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">EMAIL ADDRESS</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="tourFormControlTimeSelect">CHOOSE PREFERED TIME</label>
+                    <select class="form-control" id="tourFormControlTimeSelect">
+                        <option>1pm</option>
+                        <option>3:30pm</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
