@@ -1,1 +1,1 @@
-web: gunicorn macc-kay.wsgi:application
+web: gunicorn macc_kay.wsgi:application
