@@ -71,7 +71,13 @@ This website has different sets of pages/funcionality, dependant on weather user
 - Cart 
 
 ## Skeleton
+- Home Page: <a href="wireframes/about-wireframe-mcck.pdf" target="_blank" >Home</a>
 
+- Captures Page: <a href="wireframes/captures-wireframe-mcck.pdf" target="_blank" >Captures</a>
+
+- Book A Tour Page: <a href="wireframes/tour-wireframe-mcck.pdf" target="_blank" >Book A Tour</a>
+
+- Cart Page: <a href="wireframes/cart-wireframe-mcck.pdf" target="_blank" >Cart</a>
 
 ## Surface
 
