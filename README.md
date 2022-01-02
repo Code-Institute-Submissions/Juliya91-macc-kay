@@ -80,6 +80,17 @@ This website has different sets of pages/funcionality, dependant on weather user
 - Cart Page: <a href="wireframes/cart-wireframe-mcck.pdf" target="_blank" >Cart</a>
 
 ## Surface
+I have used minimalistic design with simple layout. Home page has hero image with photographer avatar image and text box on top of it, apart from it the rest of elements are done in simplistic design with 3 main colours. Text box has transparent dark background with white text. Hero image consist mainly of dark colours with some white details. Captures are images with description in dark grey text underneeth . All the buttons, forms and capture print images are following the main colour scheme.
+
+
+### Images
+- Several images have been used for this website. The hero and avater images at the top of the Home page with the text box with the quotes are designed to draw user's attention to the purpose of the website and text box has links to the Captures & Book A Tour Pages. In the meantime, the "Captures" page mostly consist of images.
+
+-   ### Design
+    -   #### Colour Scheme
+        - Main colors of the website are - dark gray, black and white. This colourscheme is consistant throughout all pages and is simple and classic without causing any distructions from main purpose of the website.
+    -   #### Icons
+        - Font Awesome was used for icons which are present on all pages: On the navbar for "My Profile" and "Cart", next to paragraphs of text box as the link to "Book A Tour" page on the Home page.
 
 ## Credits
 - Most of the code taken from walkthrough project Boutique Ado and modified slightly
