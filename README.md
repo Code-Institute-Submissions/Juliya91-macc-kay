@@ -24,6 +24,24 @@ MACC-Kay is an online shop where user can purchase C-Kay's prints, as well as bo
 ## Strategy
 **MACC-Kay** is targeting all age groups of those who interested in street art of London. It's target is to have a simple website where user can easely purchase prints of street art and book a tour around hot spots of London for street art. This website has fluid process of adding captures and a tour to the shopping cart. The easy to follow steps to secure checkout. Additionally, a registered user has the order history and delivery details saved to their profile for easy checkout on their next purchase.
 
+**User Stories**
+#### As a First Time User:
+- I want the website to have a visually clear purpose.
+- I want to be able intuitively browse through the website and easily find all the pages.
+- I want the functionality to be simple with engaging content.
+
+#### As a Returning User: 
+- I want to learn how to purchase digital street art prints.
+- I want to find out how to book a tour with the street artist.
+- I want to easily browse the selection of captures and artists.
+
+#### As a Frequent User: 
+- As a registered user, I want to be able to view my purchase history and have my delivery details saved.
+- As an unregistered user, I am still able to make a purchase and book a tour.
+- I want to be able to comprehensively filter the products by price and by artist
+- I want to learn more about the artists and have access to their social media accounts.
+
+
 ## Structure
 
 
