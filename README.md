@@ -47,7 +47,28 @@ MACC-Kay is an online shop where user can purchase C-Kay's prints, as well as bo
 - I have used mixed content of images, buttons and text.
 
 ## Structure
+This website has different sets of pages/funcionality, dependant on weather user is logged in or not, or if is an admin. 
 
+**First time user four pages are visible:** 
+- Home 
+- Captures ("By Artist", "By Price" and "All Captures") 
+- Book A Tour
+- My Profile ("Register" and "Log In")
+- Cart
+
+**For registered User another four pages visible:**
+- Home
+- Captures ("By Artist", "By Price" and "All Captures") 
+- Book A Tour
+- My Profile ("Order History" and "Log Out")
+- Cart (user can save delivery details on checkout)
+
+**For Admin User five pages + Log Out:**
+- Home
+- Captures ("By Artist", "By Price" and "All Captures") 
+- Book A Tour
+- My Profile ("Content Management", "Order History" and "Log Out")
+- Cart 
 
 ## Skeleton
 
