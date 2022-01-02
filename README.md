@@ -41,6 +41,10 @@ MACC-Kay is an online shop where user can purchase C-Kay's prints, as well as bo
 - I want to be able to comprehensively filter the products by price and by artist
 - I want to learn more about the artists and have access to their social media accounts.
 
+## Scope
+- I have chosen minimalistic design with dark colour accents which matches the vibe of the photographer whose work is sold on this website, as well as it allows users to focus on the beautiful captures of street art on the Captures page.
+- The Home page gives a brief information about photographer and links inviting user to visit Captures page & link to the Book A Tour page. On the Captures menu user can find break down to "By Artist", "By Price" and "All Captures", giving option to the user to filter captures in various ways or view all of them. Book A Tour page has form with button to add the tour with preferred time & date to the cart. My Profile for an unregistered user offers to register or logging in and for registered - to view their order history. Cart can be easily accessed on the right side of the navigation by simply clicking on the icon and on the page itself user may view products added as well as their images, and below secure checkout button is featured.
+- I have used mixed content of images, buttons and text.
 
 ## Structure
 
