@@ -92,5 +92,16 @@ I have used minimalistic design with simple layout. Home page has hero image wit
     -   #### Icons
         - Font Awesome was used for icons which are present on all pages: On the navbar for "My Profile" and "Cart", next to paragraphs of text box as the link to "Book A Tour" page on the Home page.
 
+## Features
+
+#### Navbar
+- Logo/website name can be clicked on any page and it will take the user to Home page.
+<!-- - Favicon has been added to show on the tab, matching the logo. -->
+- On a mobile, the navbar is then collapsed to show the toggler which expands when clicked to display the nav elements as dropdown.
+
+#### Home
+- Contains the hero image of C-Kay as DJ in dark colours with C-Kay avatar and nearly transparant black text box with links to Captures and Book A Tour pages.
+
+
 ## Credits
 - Most of the code taken from walkthrough project Boutique Ado and modified slightly

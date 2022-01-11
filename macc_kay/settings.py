@@ -64,6 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'macc_kay.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -114,6 +115,8 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'macc_kay.wsgi.application'
 
+# Change this to match gitpod address
+CSRF_TRUSTED_ORIGINS = ['https://8000-pink-stoat-9fi1x0kk.ws-eu25.gitpod.io']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
