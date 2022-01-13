@@ -8,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified capture to the shopping bag """
+    """ Add a quantity of the specified capture to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
