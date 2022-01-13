@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- Moved script to the top to fix the bug - checkout form wasn't submitting (more in README) -->
 {% block extra_js %}
     <script defer src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
