@@ -37,6 +37,8 @@ section {
     background-position-x: center;
     height: 300px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #434b53;
 }
 
 .quote-box {
@@ -141,8 +143,8 @@ input[name='q']::placeholder {
 }
 
 .capture-img {
-    max-height: 250px;
-    max-width: 250px;
+    height: 250px;
+    width: 250px;
 }
 
 .img-container {
@@ -150,9 +152,13 @@ input[name='q']::placeholder {
     height: 300px;
 }
 
+/* box-shadow element taken from W3Schools (https://www.w3schools.com/csS/tryit.asp?filename=trycss3_box-shadow3) */
 .img-container img {
     display: block;
     height: 100%;
+    box-shadow: 13px 13px 5px #434b53;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* -------------------------------- Media Queries */

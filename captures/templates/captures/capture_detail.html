@@ -13,13 +13,13 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <p>{{ capture.artist }}</p>
+                <p class="text-uppercase" style="margin: 15px; font-size:30px; text-shadow: 2px 2px 5px gray;"><strong>{{ capture.artist }}</strong></p>
                 {%if capture.image%}
                     <div class="img-container">
                         <img src="{{ capture.image.url }}"/>
                     </div>
                 {%endif%}
-                <p>{{ capture.name }}</p>
+                <p class="text-uppercase" style="margin: 15px;"><strong>{{ capture.name }}</strong></p>
                 <p>{{ capture.description }}</p>
                 <p>£{{ capture.price }}</p>
                 {% if captures.artist %}
