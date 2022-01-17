@@ -58,7 +58,7 @@
                     <a href="{% url 'capture_detail' capture.id %}">
                         <p>{{ capture.artist }}</p>
                         {% if capture.image %}
-                            <img class="img-fluid rounded" src="{{ capture.image.url }}" style="width: 200px;" height="200px"/>
+                            <img class="img-fluid rounded" src="{{ capture.image.url }}" class="capture-img"/>
                         {% endif %}
                         <p class="m-0">{{ capture.name }}</p>
                         <p>£{{ capture.price }}</p>

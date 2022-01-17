@@ -20,6 +20,10 @@
             <hr>
             <h2 class="logo-font mb-4">BOOK A TOUR</h2>
             <hr>
+            <p>
+                Would you like to discover the best spots for the real life work of street artist presented here by C-Kay?
+                Book an exiciting tour below to explore the whole new world of beautiful art pieces all around busy streets of London.
+            </p>
         </div>
     </div>
     <div class="row">
@@ -28,7 +32,7 @@
                 {% csrf_token %}
                 {{ tour_form.as_p }}
                 <div class="col-12">
-                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                    <input type="submit" class="btn btn-black text-uppercase mt-5" value="Add to Cart">
                 </div>
             </form>
         </div>

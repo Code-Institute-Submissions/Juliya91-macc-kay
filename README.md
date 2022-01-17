@@ -102,6 +102,66 @@ I have used minimalistic design with simple layout. Home page has hero image wit
 #### Home
 - Contains the hero image of C-Kay as DJ in dark colours with C-Kay avatar and nearly transparant black text box with links to Captures and Book A Tour pages.
 
+## Testing
+
+#### As a First Time User:
+**"I want the website to have a visually clear purpose."**
+> *The website has a sleek and minimal aesthetic. Appeals to the digital era i.e. digital services.*
+ 
+**"I want to be able intuitively browse through the website and easily find all the pages."**
+> *Easy to navigate and locate requirements*
+
+**"I want the functionality to be simple with engaging content."**
+> *Chic, functionable and content is engaging. Attractive user interface and edgy designs*
+
+#### As a Returning User: 
+- I want to learn how to purchase digital street art prints.
+> *Ease of use to purchase art at the click of button.*
+
+- I want to find out how to book a tour with the photographer, who owns the website.
+> *Makes booking a tour so simple. Cuts out the need for phone calls and lengthy emails. Very efficient.*
+
+- I want to easily browse the selection of captures and artists.
+> *Very clear cut to peruse the art on offer.*
+
+#### As a Frequent User: 
+- As a registered user, I want to be able to view my purchase history and have my delivery details saved.
+> *Makes it very easy to make a new purchase and all my details are saved on file, for reference.*
+
+- As an unregistered user, I am still able to make a purchase and book a tour.
+> *Allows the opportunity to trial the website, without the pressure of committing to signing up. This entices me to register in the future.*
+
+- I want to be able to comprehensively filter the products by price and by artist.
+> *Provides transparency to sift through price points from low to high, against different budgets.Gives the opportunity to view a specific artists work entirely.*
+
+- I want to learn more about the artists and have access to their social media accounts.
+> *Helpful to learn about the artists' perspectives, backgrounds, inspiration. Allows users to relate to the art work much closer.*
+
 
 ## Credits
 - Most of the code taken from walkthrough project Boutique Ado and modified slightly
+
+## Deployment
+
+### Heroku Deployment
+This project was deployed through Heroku using the following steps:
+
+#### Requirements and Procfile
+Heroku needs to know which technologies are being used and any requirements, so I created files to let it know. Before creating the Heroku app, create these files using the following steps in GitPod:
+- In the GitPod terminal, type pip3 freeze --local > requirements.txt to create your requirements file.
+- Create your Procfile and insert the following code: web: gunicorn ARTstop.wsgi:application and make sure there is no additional blank line after it.
+- Push these files to your repository.
+
+#### Creating Heroku App
+- Log into Heroku
+- Select 'Create New App' from your dashboard
+- Choose an app name (if there has been an app made with that name, you will be informed and will need to choose an alternative)
+- Select the appropriate region based on your location
+- Click 'Create App'
+
+#### Connecting to GitHub
+- From the dashboard, click the 'Deploy' tab towards the top of the screen
+- From here, locate 'Deployment Method' and choose 'GitHub'
+- From the search bar newly appeared, locate your repository by name
+- When you have located the correct repository, click 'Connect'
+- DO NOT CLICK 'ENABLE AUTOMATIC DEPLOYMENT'

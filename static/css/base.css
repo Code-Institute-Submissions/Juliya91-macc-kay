@@ -5,6 +5,21 @@ html {
 body {
     font-family: 'Chakra Petch', sans-serif;
     color: #212529;
+    height: calc(100vh - 164px);
+}
+
+div.show {
+    background-color: #212529;
+    color: #fff;
+}
+
+.dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-item:hover{
+    background-color:#fff;
+    color: #212529;
 }
 
 section {
@@ -52,27 +67,29 @@ section {
 }
 
 .shop-now-button {
-    background: black;
+    background: #212529;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #212529 !important; 
     color: white;
+    border-radius: 10px;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #212529 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #212529;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #212529;
     color: white !important;
+    border-radius: 10px;
 }
 
 .shop-now-button:hover,
@@ -81,8 +98,9 @@ section {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #212529;
     color: white;
+    border-radius: 10px;
 }
 
 .text-black {
@@ -97,10 +115,6 @@ section {
     border: 1px solid white !important;
 }
 
-div.show {
-    background-color: rgb(36, 35, 35);
-}
-
 a.artist-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -112,16 +126,33 @@ a.artist-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    border-radius: 10px;
 }
 
 .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
+    border-radius: 10px;
 }
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+.capture-img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.img-container {
+    width: 300px;
+    height: 300px;
+}
+
+.img-container img {
+    display: block;
+    height: 100%;
 }
 
 /* -------------------------------- Media Queries */
@@ -141,8 +172,8 @@ input[name='q']::placeholder {
   }
   
   .allauth-form-inner-content input {
-      border-color: #000;
-      border-radius: 0;
+      border-color: #212529;
+      border-radius: 10px;
   }
   
   .allauth-form-inner-content label:not([for='id_remember']) {
@@ -165,12 +196,12 @@ input[name='q']::placeholder {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      background-color: #000;
-      border: 1px solid #000;
+      background-color: #212529;
+      border: 1px solid #212529;
       padding: .375rem .75rem;
       font-size: 1rem;
       line-height: 1.5;
-      border-radius: 0;
+      border-radius: 10px;
   
       /* standard bootstrap btn transitions */
       transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -179,8 +210,8 @@ input[name='q']::placeholder {
   .allauth-form-inner-content button:hover,
   .allauth-form-inner-content input[type='submit']:hover {	
       color: #fff;
-      background-color: #222;
-      border-color: #222;
+      background-color: #212529;
+      border-color: #212529;
   }
   
   .allauth-form-inner-content a {
