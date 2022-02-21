@@ -117,7 +117,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'macc_kay.wsgi.application'
 
 # Change this to match gitpod address
-CSRF_TRUSTED_ORIGINS = ['https://8000-pink-stoat-9fi1x0kk.ws-eu27.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-juliya91-macckay-xhqovyqpx7t.ws-eu33.gitpod.io']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
