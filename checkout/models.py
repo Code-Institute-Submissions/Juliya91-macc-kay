@@ -68,7 +68,7 @@ class OrderLineItem(models.Model):
     capture = models.ForeignKey(
         Capture, null=False, blank=False, on_delete=models.CASCADE)
     capture_option = models.CharField(
-        max_length=2, null=True, blank=True)  # signed & not signed
+        max_length=20, null=True, blank=True)  # signed & not signed
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2,
