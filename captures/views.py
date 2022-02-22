@@ -88,3 +88,27 @@ def add_capture(request):
     }
 
     return render(request, template, context)
+
+
+def edit_capture(request, capture_id):
+    """ Edit a capture in the store """
+    capture = get_object_or_404(Capture, pk=capture_id)
+    if request.method == 'POST':
+        form = CaptureForm(request.POST, request.FILES, instance=capture)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated capture!')
+            return redirect(reverse('capture_detail', args=[capture.id]))
+        else:
+            messages.error(request, 'Failed to update capture. Please ensure the form is valid.')
+    else:
+        form = CaptureForm(instance=capture)
+        messages.info(request, f'You are editing {capture.name}')
+
+    template = 'captures/edit_capture.html'
+    context = {
+        'form': form,
+        'capture': capture,
+    }
+
+    return render(request, template, context)

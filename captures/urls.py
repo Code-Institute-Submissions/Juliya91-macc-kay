@@ -6,4 +6,5 @@ urlpatterns = [
     path('<capture_id>', views.capture_detail, name='capture_detail'),
     path('<int:capture_id>/', views.capture_detail, name='capture_detail'),
     path('add/', views.add_capture, name='add_capture'),
+    path('edit/<int:capture_id>/', views.edit_capture, name='edit_capture'),
 ]
