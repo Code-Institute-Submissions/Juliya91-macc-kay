@@ -75,7 +75,7 @@
                 <div class="dropdown-menu text-black border-0" aria-labelledby="user-options">
                   {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                          <a href="" class="dropdown-item text-black">CONTENT MANAGEMENT</a>
+                          <a href="{% url 'add_capture' %}" class="dropdown-item text-black">CONTENT MANAGEMENT</a>
                       {% endif %}
                       <a href="{% url 'profile' %}" class="dropdown-item text-black">ORDER HISTORY</a>
                       <a href="{% url 'account_logout' %}" class="dropdown-item text-black">LOGOUT</a>

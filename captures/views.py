@@ -71,6 +71,17 @@ def capture_detail(request, capture_id):
 def add_capture(request):
     """ Add a capture to the store """
     form = CaptureForm()
+    if request.method == 'POST':
+        form = CaptureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added capture!')
+            return redirect(reverse('add_capture'))
+        else:
+            messages.error(request, 'Failed to add capture. Please ensure the form is valid.')
+    else:
+        form = CaptureForm()
+
     template = 'captures/add_capture.html'
     context = {
         'form': form,
