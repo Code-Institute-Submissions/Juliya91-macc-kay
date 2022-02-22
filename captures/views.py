@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
+
 from .models import Capture, Artist
+from .forms import CaptureForm
 
 
 def all_captures(request):
@@ -56,10 +59,21 @@ def all_captures(request):
 
 
 def capture_detail(request, capture_id):
-    """ A view to show product details """
+    """ A view to show capture details """
     capture = get_object_or_404(Capture, pk=capture_id)
 
     context = {
         'capture': capture,
     }
     return render(request, 'captures/capture_detail.html', context)
+
+
+def add_capture(request):
+    """ Add a capture to the store """
+    form = CaptureForm()
+    template = 'captures/add_capture.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
