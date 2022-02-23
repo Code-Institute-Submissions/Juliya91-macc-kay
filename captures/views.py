@@ -74,9 +74,9 @@ def add_capture(request):
     if request.method == 'POST':
         form = CaptureForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            capture = form.save()
             messages.success(request, 'Successfully added capture!')
-            return redirect(reverse('add_capture'))
+            return redirect(reverse('capture_detail', args=[capture.id]))
         else:
             messages.error(request, 'Failed to add capture. Please ensure the form is valid.')
     else:
@@ -112,3 +112,11 @@ def edit_capture(request, capture_id):
     }
 
     return render(request, template, context)
+
+
+def delete_capture(request, capture_id):
+    """ Delete a capture from the store """
+    capture = get_object_or_404(Capture, pk=capture_id)
+    capture.delete()
+    messages.success(request, 'Capture deleted!')
+    return redirect(reverse('captures'))

@@ -65,6 +65,12 @@
                         {% endif %}
                         <p class="m-0">{{ capture.name }}</p>
                         <p>£{{ capture.price }}</p>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_capture' capture.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_capture' capture.id %}">Delete</a>
+                            </small>
+                        {% endif %}
                     </a>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
