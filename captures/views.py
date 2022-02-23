@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -68,8 +69,12 @@ def capture_detail(request, capture_id):
     return render(request, 'captures/capture_detail.html', context)
 
 
+@login_required
 def add_capture(request):
     """ Add a capture to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     form = CaptureForm()
     if request.method == 'POST':
         form = CaptureForm(request.POST, request.FILES)
@@ -90,8 +95,12 @@ def add_capture(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_capture(request, capture_id):
     """ Edit a capture in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     capture = get_object_or_404(Capture, pk=capture_id)
     if request.method == 'POST':
         form = CaptureForm(request.POST, request.FILES, instance=capture)
@@ -114,8 +123,12 @@ def edit_capture(request, capture_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_capture(request, capture_id):
     """ Delete a capture from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     capture = get_object_or_404(Capture, pk=capture_id)
     capture.delete()
     messages.success(request, 'Capture deleted!')
