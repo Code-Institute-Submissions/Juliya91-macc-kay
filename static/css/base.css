@@ -30,6 +30,10 @@ section {
     color: #fff;
 }
 
+.home_section{
+    margin-top: -10px;
+}
+
 .avatar {
     background: url("/media/avatart.jpg");
     background-size: contain;

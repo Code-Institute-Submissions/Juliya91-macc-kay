@@ -8,10 +8,19 @@ class DateInput(forms.DateInput):
 
 
 class TourForm(forms.ModelForm):
+
     class Meta:
         model = Tour
         fields = ('first_name', 'last_name',
                   'email', 'preferred_time', 'preferred_date',)
         widgets = {
             'preferred_date': DateInput(),
+            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
+            'email': forms.TextInput(attrs={'placeholder': 'Email Address'}),
+        }
+        labels = {
+            "first_name": "",
+            "last_name": "",
+            "email": "",
         }
