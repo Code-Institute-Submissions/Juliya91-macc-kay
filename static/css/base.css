@@ -25,13 +25,14 @@ div.show {
 section {
     background: url("/media/home.jpeg") no-repeat center center;
     background-size: cover;
-    background-position: relative;
+    background-position-x: center;
+    position: relative;
     height: 100vh;
     color: #fff;
 }
 
 .home_section{
-    margin-top: -10px;
+    margin-top: -40px;
 }
 
 .avatar {
@@ -42,13 +43,13 @@ section {
     height: 300px;
     margin-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px #434b53;
 }
 
 .quote-box {
     position: absolute;
     width: 85%;
     left: 7.5%;
+    height: 170px;
     background-color: rgba(0, 0, 0, 0.815);
     padding: 10px;
 }
@@ -242,10 +243,33 @@ input[name='q']::placeholder {
         padding-top: 130px;
     }
 
+    .home_section{
+        margin-top: -10px;
+    }
+
 }
 
 @media (max-width: 991px) {
     .header-container {
         padding-top: 110px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home_section {
+        margin-top: -46px;
+    }
+
+    .logo-mob {
+        font-size: small;
+    }
+
+    .logo-font {
+        font-size: large;
+    }
+
+
+    .quote-box {
+        height: 380px;
     }
 }

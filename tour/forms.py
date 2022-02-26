@@ -11,8 +11,8 @@ class TourForm(forms.ModelForm):
 
     class Meta:
         model = Tour
-        fields = ('first_name', 'last_name',
-                  'email', 'preferred_time', 'preferred_date',)
+        fields = ('first_name', 'last_name', 'email',
+                  'preferred_time', 'preferred_date',)
         widgets = {
             'preferred_date': DateInput(),
             'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
