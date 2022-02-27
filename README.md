@@ -127,8 +127,6 @@ I have used minimalistic design with simple layout. Home page has hero image wit
 + [Balsamiq](https://balsamiq.com/) used to create wireframes.
 + [RandomKeygen](https://randomkeygen.com/) used to create a strong password for required  `<SECRET_KEY>`.
 + [Lighthouse](https://developers.google.com/web/tools/lighthouse) for performance review.
-+ [Responsinator](https://www.responsinator.com/) used to check site was responsive on different screen sizes.
-+ [Am I Responsive](http://ami.responsivedesign.is/) used to generate README intro image.
 + [favicon.io](https://favicon.io/) used to create a site favicon.
 
 ## Testing
